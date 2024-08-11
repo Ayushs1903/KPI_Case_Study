@@ -6,5 +6,6 @@ spark-submit ^
 --conf spark.sql.catalog.spark_catalog=org.apache.spark.sql.delta.catalog.DeltaCatalog ^
 --conf spark.driver.extraJavaOptions=-Dlog4j.configuration=C:\\Users\\singhays\\Projects\\CaseStudy\\log4j.properties ^
 --conf spark.executor.extraJavaOptions=-Dlog4j.configuration=C:\\Users\\singhays\\Projects\\CaseStudy\\log4j.properties ^
-test.py ^
---case C:\\Users\\singhays\\Projects\\CaseStudy\\log4j.properties
+C:\\Users\\singhays\\Projects\\CaseStudy\\src\\main\\pyspark\\main.py ^
+--useCase datajob ^
+--jobMode full

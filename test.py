@@ -37,6 +37,14 @@ def main(case):
     df.show()
     # df.write.format('delta').mode('overwrite').partitionBy("Age").save("\\testf\\test1")
 
+    with open("C:\\Users\\singhays\\Projects\\CaseStudy\\src\\main\\pyspark\\table.sql","r") as f:
+        content = f.read()
+    print(content)
+
+    t = spark.sql(content)
+    q = spark.sql("select * from temp")
+    q.show()
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Testing")
     parser.add_argument("--case",type=str, required=True, help='Path to the input data')

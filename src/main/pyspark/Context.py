@@ -1,0 +1,48 @@
+import argparse
+from datetime import date
+from Utils import Logger, FileImplicits
+
+logger = Logger("Context").getlogger()
+
+
+class ArgsConfig:
+    def __init__(self, useCase, jobMode, referenceDate, numDays):
+        self.useCase = useCase
+        self.jobMode = jobMode
+        self.referenceDate = referenceDate
+        self.numDays = numDays
+
+    def __repr__(self):
+        return (f"AppConfig(useCase={self.useCase}, "
+                f"jobMode={self.jobMode}, "
+                f"referenceDate={self.referenceDate}, "
+                f"numDays={self.numDays})"
+                )
+
+class Context:
+    def __init__(self, argsConfig, config):
+        self.argsConfig = argsConfig
+        self.config = config
+
+    # def __init__(self,path = FileImplicits.getAbsolutePath("\\resources\\config.json")):
+    #     self.path = path
+    # def loadConfig(self):
+    #     with open(self.path,"r") as conf:
+    #         config =
+
+def parseArguments():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--useCase', type=str, required=True, help='useCase')
+    parser.add_argument('--jobMode', type=str, required=True, help='jobMode')
+    parser.add_argument('--referenceDate', type=str, required=False, default=date.today().__str__(), help='referenceDate')
+    parser.add_argument('--numDays', type=int, required=False, help='numDays')
+    args = parser.parse_args()
+    argsConfig = ArgsConfig(useCase=args.useCase, jobMode=args.jobMode, referenceDate=args.referenceDate, numDays=args.numDays)
+    logger.info(f"Successfully created Argsconfig: {argsConfig.__str__()}")
+    return argsConfig
+
+
+
+
+
+
