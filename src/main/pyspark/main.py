@@ -1,5 +1,5 @@
 from pyspark.sql import SparkSession
-from Utils import Logger, ConfigLoader
+from Utils import Logger, ConfigLoader, FileImplicits
 from Context import parseArguments, Context
 from DataJob import LoadData
 from CalculateKPI import KPILoader
@@ -32,12 +32,19 @@ def main():
     context = contextCreator()
     spark = SparkSessionCreater(context.config["sparkParameters"]).createSpark()
 
-    if context.argsConfig.useCase == "DataJob":
-        LoadData(spark=spark, context=context).startDataJob()
-    elif context.argsConfig.useCase == "CalculateKPI":
-        KPILoader(spark=spark, context=context).startMetricCalculation()
-    else:
-        logger.info("JobMode should be DataJob or CalculateKPI")
+    try:
+        if context.argsConfig.useCase == "DataJob":
+            LoadData(spark=spark, context=context).startDataJob()
+        elif context.argsConfig.useCase == "CalculateKPI":
+            KPILoader(spark=spark, context=context).startMetricCalculation()
+        else:
+            logger.info("JobMode should be DataJob or CalculateKPI")
+    finally:
+        spark.stop()
+        # FileImplicits.deleteFileOrDirectory(context.config["sparkParameters"]["spark.local.dir"])
+        logger.info("Application finished")
+
+
 
 
 

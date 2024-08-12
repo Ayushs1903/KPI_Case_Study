@@ -23,12 +23,6 @@ logger = Logger("Utility").getlogger()
 
 class FileImplicits(object):
     @staticmethod
-    def getRootPath():
-        return "C:\\Users\\singhays\\Projects\\CaseStudy"
-    @staticmethod
-    def getAbsolutePath(relativePath):
-        return FileImplicits.getRootPath()+relativePath
-    @staticmethod
     def deleteFileOrDirectory(path):
         if os.path.isfile(path):
             os.remove(path)
@@ -67,8 +61,7 @@ class TableImplicits(object):
     def deployTable(spark, scriptPath):
         script = TableImplicits.loadTable(scriptPath)
         logger.info(f"Deploying table \n {script}")
-        table = spark.sql(script)
-        table.show()
+        spark.sql(script)
         logger.info(f"Successfully deployed table")
 
 
