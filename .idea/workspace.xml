@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6bbffab3-6e1f-466a-ad48-0459068bfee8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/scripts/increment_data_job.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/otif_delta_load.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/otif_full_load.bat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/pyspark/DataJob.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/pyspark/DataJob.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/pyspark/code.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/spark/spark-10b75c21-562b-4d52-a59d-1ea3d566e13c/userFiles-8518f5ec-a66d-461f-b69c-dad906a27f9e/io.delta_delta-core_2.12-2.4.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/spark/spark-10b75c21-562b-4d52-a59d-1ea3d566e13c/userFiles-8518f5ec-a66d-461f-b69c-dad906a27f9e/io.delta_delta-storage-2.4.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp/spark/spark-10b75c21-562b-4d52-a59d-1ea3d566e13c/userFiles-8518f5ec-a66d-461f-b69c-dad906a27f9e/org.antlr_antlr4-runtime-4.9.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/pyspark/CalculateKPI.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/pyspark/CalculateKPI.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/tablesDDL/OTIF.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/tablesDDL/OTIF.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/tablesDDL/table.sql" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,13 +52,46 @@
       <recent name="C:\Users\singhays\Projects\CaseStudy\src\main\tables" />
     </key>
   </component>
-  <component name="RunManager" selected="Batch.increment_data_job">
+  <component name="RunManager" selected="Batch.otif_delta_load">
+    <configuration name="full_data_load" type="BatchConfigurationType" factoryName="Batch" temporary="true">
+      <module name="CaseStudy" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\singhays\Projects\CaseStudy\scripts" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SCRIPT_NAME" value="full_data_load.bat" />
+      <option name="PARAMETERS" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="increment_data_job" type="BatchConfigurationType" factoryName="Batch" temporary="true">
       <module name="CaseStudy" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="WORKING_DIRECTORY" value="C:\Users\singhays\Projects\CaseStudy\scripts" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SCRIPT_NAME" value="increment_data_job.bat" />
+      <option name="PARAMETERS" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="otif_delta_load" type="BatchConfigurationType" factoryName="Batch" temporary="true">
+      <module name="CaseStudy" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\singhays\Projects\CaseStudy\scripts" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SCRIPT_NAME" value="otif_delta_load.bat" />
+      <option name="PARAMETERS" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="otif_full_load" type="BatchConfigurationType" factoryName="Batch" temporary="true">
+      <module name="CaseStudy" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\singhays\Projects\CaseStudy\scripts" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SCRIPT_NAME" value="otif_full_load.bat" />
       <option name="PARAMETERS" value="" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -76,66 +108,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="sc" type="BatchConfigurationType" factoryName="Batch" temporary="true">
-      <module name="CaseStudy" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="WORKING_DIRECTORY" value="C:\Users\singhays\Projects\CaseStudy" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SCRIPT_NAME" value="sc.bat" />
-      <option name="PARAMETERS" value="" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CalculateKPI" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="CaseStudy" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/main/pyspark" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/main/pyspark/CalculateKPI.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Context (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="CaseStudy" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/main/pyspark" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/main/pyspark/Context.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Batch.otif_delta_load" />
+        <item itemvalue="Batch.otif_full_load" />
+        <item itemvalue="Batch.full_data_load" />
         <item itemvalue="Batch.increment_data_job" />
         <item itemvalue="Batch.sc (1)" />
-        <item itemvalue="Python.CalculateKPI" />
-        <item itemvalue="Batch.sc" />
-        <item itemvalue="Python.Context (1)" />
       </list>
     </recent_temporary>
   </component>

@@ -5,7 +5,7 @@ CREATE EXTERNAL TABLE OTIF (
     Size_Grid_Value int,
     `Year` int,
     `MONTH` int,
-    OTIF_KPI int
+    OTIF_KPI double
 )
 USING delta
 PARTITIONED BY (Sales_Organization,`Year`,`MONTH`)

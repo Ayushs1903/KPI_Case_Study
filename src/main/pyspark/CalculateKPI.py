@@ -25,9 +25,11 @@ class KPILoader:
             numDays = self.context.argsConfig.numDays
             requestedDate = datetime.strptime(referenceDate, "%Y-%m-%d").date() - timedelta(days=numDays)
             logger.info(f"Requested to load from date: {requestedDate}")
-            filterCondition = [(col("Year") > lit(requestedDate.year)) | (col("Year") == lit(requestedDate.year) & col("Month") >= requestedDate.month)]
+            filterCondition = [(col("Year") > lit(requestedDate.year)) | ((col("Year") == lit(requestedDate.year) ) & (col("Month") >= requestedDate.month))]
             orders = orders.filter(*filterCondition)
+            logger.info(f"Loaded records from orders table: {orders.count()}")
             delivery = delivery.filter(*filterCondition)
+            logger.info(f"Loaded records from delivery table: {delivery.count()}")
 
         colsToSelect = [col("orders.Sales_Order_Document"),
                         col("orders.Sales_Organization"),
@@ -55,8 +57,8 @@ class KPILoader:
         df = df.filter(col("KPI_Flag")==lit(1))
         groupByCols = [col("Sales_Order_Document"),col("Sales_Organization"),col("Article"),col("Size_Grid_Value"),col("Year"),col("Month")]
 
-        aggregated = df.groupBy(*groupByCols).agg(fsum(col("Qty_Percent")*lit(100)).alias("OTIF_KPI"))
-        aggregated = aggregated.filter(col("OTIF_KPI")>lit(90))
+        aggregated = df.groupBy(*groupByCols).agg(round(fsum(col("Qty_Percent")*lit(100)),0).alias("OTIF_KPI"))
+        aggregated = aggregated.filter(col("OTIF_KPI")>lit(90.0))
 
         DataframeImplicits.write(spark=self.spark,
                                  df= aggregated,
