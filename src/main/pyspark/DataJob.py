@@ -9,7 +9,8 @@ class LoadData:
         self.context = context
 
     def ordersTransformation(self, df):
-        cols = df.columns.remove("Requested_Delivery_Date")
+        cols = df.columns
+        cols.remove("Requested_Delivery_Date")
         return cols+[
             to_date(col("Requested_Delivery_Date"),"dd-MM-yyyy").alias("Requested_Delivery_Date"),
             year(to_date(col("Requested_Delivery_Date"),"dd-MM-yyyy")).alias("Year"),
@@ -44,12 +45,14 @@ class LoadData:
                                  df= df,
                                  path=self.context.config["absolutePath"]+self.context.config["tables"]["orders"],
                                  format=self.context.config["dataJob"]["outputOrders"]["format"],
+                                 mode=self.context.config["dataJob"]["outputOrders"]["mode"],
                                  options=self.context.config["dataJob"]["outputOrders"]["options"])
 
 
 
     def deliveryTransformation(self, df):
-        cols = df.columns.remove("Actual_Delivery_Date")
+        cols = df.columns
+        cols.remove("Actual_Delivery_Date")
         return cols+[
             to_date(col("Actual_Delivery_Date"),"dd-MM-yyyy").alias("Actual_Delivery_Date"),
             year(to_date(col("Actual_Delivery_Date"),"dd-MM-yyyy")).alias("Year"),
@@ -82,6 +85,7 @@ class LoadData:
                                  df= df,
                                  path=self.context.config["absolutePath"]+self.context.config["tables"]["delivery"],
                                  format=self.context.config["dataJob"]["outputDelivery"]["format"],
+                                 mode=self.context.config["dataJob"]["outputDelivery"]["mode"],
                                  options=self.context.config["dataJob"]["outputDelivery"]["options"])
 
     def startDataJob(self):

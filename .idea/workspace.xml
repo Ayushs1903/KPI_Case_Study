@@ -5,14 +5,52 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6bbffab3-6e1f-466a-ad48-0459068bfee8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/tablesDDL/Delivery.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/tablesDDL/Orders.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/pyspark/CalculateKPI.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/pyspark/CalculateKPI.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/sc.bat" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/sc.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/pyspark/Context.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/pyspark/Context.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/pyspark/DataJob.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/pyspark/DataJob.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/pyspark/Utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/pyspark/Utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/pyspark/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/pyspark/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/pyspark/table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/tablesDDL/table.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tables/delivery/Sales_Organization=417600/.part-00000-9ce02ca8-2856-4ad3-88cd-405037eb7732.c000.snappy.parquet.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tables/delivery/Sales_Organization=417600/part-00000-9ce02ca8-2856-4ad3-88cd-405037eb7732.c000.snappy.parquet" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tables/delivery/_delta_log/.00000000000000000000.json.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tables/delivery/_delta_log/.00000000000000000001.json.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tables/delivery/_delta_log/00000000000000000000.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tables/delivery/_delta_log/00000000000000000001.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/spark/spark-47265c56-3154-4c40-a97e-057c134d891a/userFiles-2a724711-5880-4197-ae65-a642eb959976/io.delta_delta-core_2.12-2.4.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/spark/spark-47265c56-3154-4c40-a97e-057c134d891a/userFiles-2a724711-5880-4197-ae65-a642eb959976/io.delta_delta-storage-2.4.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/spark/spark-47265c56-3154-4c40-a97e-057c134d891a/userFiles-2a724711-5880-4197-ae65-a642eb959976/org.antlr_antlr4-runtime-4.9.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/spark/spark-55e437a0-6612-4c70-8d13-21be014302c9/userFiles-7dbc9d11-7963-4aef-a153-971cbc1091bf/io.delta_delta-core_2.12-2.4.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/spark/spark-55e437a0-6612-4c70-8d13-21be014302c9/userFiles-7dbc9d11-7963-4aef-a153-971cbc1091bf/io.delta_delta-storage-2.4.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/spark/spark-55e437a0-6612-4c70-8d13-21be014302c9/userFiles-7dbc9d11-7963-4aef-a153-971cbc1091bf/org.antlr_antlr4-runtime-4.9.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/spark/spark-61449b52-57b1-41f5-8faf-e3c41bde2f69/userFiles-d7fb2cfb-7f30-4a32-8d39-99fe9916f1c7/io.delta_delta-core_2.12-2.4.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/spark/spark-61449b52-57b1-41f5-8faf-e3c41bde2f69/userFiles-d7fb2cfb-7f30-4a32-8d39-99fe9916f1c7/io.delta_delta-storage-2.4.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/spark/spark-61449b52-57b1-41f5-8faf-e3c41bde2f69/userFiles-d7fb2cfb-7f30-4a32-8d39-99fe9916f1c7/org.antlr_antlr4-runtime-4.9.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/spark/spark-71964cc7-546f-4a61-ba2d-eab8e402683f/userFiles-21aa937f-1647-4721-be13-c84dc4ee34be/io.delta_delta-core_2.12-2.4.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/spark/spark-71964cc7-546f-4a61-ba2d-eab8e402683f/userFiles-21aa937f-1647-4721-be13-c84dc4ee34be/io.delta_delta-storage-2.4.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/spark/spark-71964cc7-546f-4a61-ba2d-eab8e402683f/userFiles-21aa937f-1647-4721-be13-c84dc4ee34be/org.antlr_antlr4-runtime-4.9.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/spark/spark-7deeb346-fc6d-4213-bb01-3969446a7c6f/userFiles-9e8e37d8-c71e-4ab5-ae20-0f19ae823d8d/io.delta_delta-core_2.12-2.4.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/spark/spark-7deeb346-fc6d-4213-bb01-3969446a7c6f/userFiles-9e8e37d8-c71e-4ab5-ae20-0f19ae823d8d/io.delta_delta-storage-2.4.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/spark/spark-7deeb346-fc6d-4213-bb01-3969446a7c6f/userFiles-9e8e37d8-c71e-4ab5-ae20-0f19ae823d8d/org.antlr_antlr4-runtime-4.9.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/spark/spark-81dd3eac-ebef-4f93-b4c8-a43d991fa32b/userFiles-922067be-9ff5-4270-95cb-a150c277c82d/io.delta_delta-core_2.12-2.4.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/spark/spark-81dd3eac-ebef-4f93-b4c8-a43d991fa32b/userFiles-922067be-9ff5-4270-95cb-a150c277c82d/io.delta_delta-storage-2.4.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/spark/spark-81dd3eac-ebef-4f93-b4c8-a43d991fa32b/userFiles-922067be-9ff5-4270-95cb-a150c277c82d/org.antlr_antlr4-runtime-4.9.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/spark/spark-8730c895-1641-4103-a180-8cfd5a00b76b/userFiles-7bb0e80a-fd9d-4996-8501-665c776bf5bb/io.delta_delta-core_2.12-2.4.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/spark/spark-8730c895-1641-4103-a180-8cfd5a00b76b/userFiles-7bb0e80a-fd9d-4996-8501-665c776bf5bb/io.delta_delta-storage-2.4.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/spark/spark-8730c895-1641-4103-a180-8cfd5a00b76b/userFiles-7bb0e80a-fd9d-4996-8501-665c776bf5bb/org.antlr_antlr4-runtime-4.9.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/spark/spark-8a79cd6c-0f81-4741-862c-5c58d5a1b26f/userFiles-ffc3c0d9-bfe3-4a74-b250-afd93c545a93/io.delta_delta-core_2.12-2.4.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/spark/spark-8a79cd6c-0f81-4741-862c-5c58d5a1b26f/userFiles-ffc3c0d9-bfe3-4a74-b250-afd93c545a93/io.delta_delta-storage-2.4.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/spark/spark-8a79cd6c-0f81-4741-862c-5c58d5a1b26f/userFiles-ffc3c0d9-bfe3-4a74-b250-afd93c545a93/org.antlr_antlr4-runtime-4.9.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/spark/spark-bb5b6646-4cd3-4896-8479-9a3671f40c05/userFiles-d5fe9274-b7c9-4de0-80ac-e9d50cb99b1a/io.delta_delta-core_2.12-2.4.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/spark/spark-bb5b6646-4cd3-4896-8479-9a3671f40c05/userFiles-d5fe9274-b7c9-4de0-80ac-e9d50cb99b1a/io.delta_delta-storage-2.4.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/spark/spark-bb5b6646-4cd3-4896-8479-9a3671f40c05/userFiles-d5fe9274-b7c9-4de0-80ac-e9d50cb99b1a/org.antlr_antlr4-runtime-4.9.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/spark/spark-bdd0c683-359c-4c1b-943f-33b70fd10abe/userFiles-a51fdc74-b4b2-4d63-96ab-2a4f5550fcff/io.delta_delta-core_2.12-2.4.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/spark/spark-bdd0c683-359c-4c1b-943f-33b70fd10abe/userFiles-a51fdc74-b4b2-4d63-96ab-2a4f5550fcff/io.delta_delta-storage-2.4.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/spark/spark-bdd0c683-359c-4c1b-943f-33b70fd10abe/userFiles-a51fdc74-b4b2-4d63-96ab-2a4f5550fcff/org.antlr_antlr4-runtime-4.9.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/spark/spark-bf7b5fc9-1f1c-4c8f-a36d-67ae796741db/userFiles-b5395856-5e1f-4cb3-a06a-01fa05436d0c/io.delta_delta-core_2.12-2.4.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/spark/spark-bf7b5fc9-1f1c-4c8f-a36d-67ae796741db/userFiles-b5395856-5e1f-4cb3-a06a-01fa05436d0c/io.delta_delta-storage-2.4.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/spark/spark-bf7b5fc9-1f1c-4c8f-a36d-67ae796741db/userFiles-b5395856-5e1f-4cb3-a06a-01fa05436d0c/org.antlr_antlr4-runtime-4.9.3.jar" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,10 +88,22 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\singhays\Projects\CaseStudy\scripts" />
       <recent name="C:\Users\singhays\Projects\CaseStudy\src\main\tables" />
     </key>
   </component>
-  <component name="RunManager" selected="Batch.sc">
+  <component name="RunManager" selected="Batch.sc (1)">
+    <configuration name="sc (1)" type="BatchConfigurationType" factoryName="Batch" temporary="true">
+      <module name="CaseStudy" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\singhays\Projects\CaseStudy\scripts" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SCRIPT_NAME" value="sc.bat" />
+      <option name="PARAMETERS" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="sc" type="BatchConfigurationType" factoryName="Batch" temporary="true">
       <module name="CaseStudy" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -107,27 +157,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Context" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="CaseStudy" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/main/pyspark" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\singhays\Projects\CaseStudy\src\main\pyspark\Context.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CaseStudy" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -151,11 +180,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Batch.sc" />
+        <item itemvalue="Batch.sc (1)" />
         <item itemvalue="Python.CalculateKPI" />
+        <item itemvalue="Batch.sc" />
         <item itemvalue="Python.Context (1)" />
         <item itemvalue="Python.main" />
-        <item itemvalue="Python.Context" />
       </list>
     </recent_temporary>
   </component>

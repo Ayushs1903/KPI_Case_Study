@@ -62,6 +62,7 @@ class KPILoader:
                                  df= aggregated,
                                  path=self.context.config["absolutePath"]+self.context.config["tables"]["OTIF"],
                                  format=self.context.config["OTIF"]["format"],
+                                 mode=self.context.config["OTIF"]["mode"],
                                  options=self.context.config["OTIF"]["options"])
 
     def startMetricCalculation(self):

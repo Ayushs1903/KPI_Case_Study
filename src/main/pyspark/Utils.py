@@ -50,12 +50,12 @@ class ConfigLoader(object):
 class DataframeImplicits(object):
     @staticmethod
     def read(spark, path, format, options={}):
-        # logger.info(f"Started reading path: {path}")
+        logger.info(f"Started reading path: {path}")
         return spark.read.format(format).options(**options).load(path)
     @staticmethod
-    def write(spark, df, path, format, options={}):
+    def write(spark, df, path, format, mode, options={}):
         logger.info(f"Started writing to path: {path}")
-        df.write.format(format).options(**options).save(path)
+        df.write.format(format).mode(mode).options(**options).save(path)
 
 class TableImplicits(object):
     @staticmethod

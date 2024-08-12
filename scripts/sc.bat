@@ -7,5 +7,6 @@ spark-submit ^
 --conf spark.driver.extraJavaOptions=-Dlog4j.configuration=C:\\Users\\singhays\\Projects\\CaseStudy\\log4j.properties ^
 --conf spark.executor.extraJavaOptions=-Dlog4j.configuration=C:\\Users\\singhays\\Projects\\CaseStudy\\log4j.properties ^
 C:\\Users\\singhays\\Projects\\CaseStudy\\src\\main\\pyspark\\main.py ^
---useCase datajob ^
---jobMode full
+--useCase DataJob ^
+--jobMode full ^
+--configPath C:\\Users\\singhays\\Projects\\CaseStudy\\src\\main\\resources\\config.json

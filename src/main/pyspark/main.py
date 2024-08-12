@@ -1,7 +1,8 @@
 from pyspark.sql import SparkSession
-from pyspark.sql.functions import to_date
-from Utils import Logger, ConfigLoader, FileImplicits, DataframeImplicits
+from Utils import Logger, ConfigLoader
 from Context import parseArguments, Context
+from DataJob import LoadData
+from CalculateKPI import KPILoader
 
 
 logger = Logger("main").getlogger()
@@ -18,27 +19,37 @@ class SparkSessionCreater:
             builder.config(key, value)
         return builder.getOrCreate()
 
-def main():
-    logger.info(f"Application started")
+def contextCreator():
     argsConfig = parseArguments()
-    # print(FileImplicits.getAbsolutePath("\\src\\main\\resources\\config.json"))
-    config = ConfigLoader.loadConf(FileImplicits.getAbsolutePath("\\src\\main\\resources\\config.json"))
+    config = ConfigLoader.loadConf(argsConfig.configPath)
     context = Context(argsConfig=argsConfig, config=config)
-    # print(context.config)
-    # print(context.config["sparkParameters"])
-    # for k,v in context.config["sparkParameters"].items():
-    #     print(k,v)
-    # print(context.argsConfig)
+    logger.info(f"Context created")
     return context
 
 
-if __name__=="__main__":
-    context = main()
+def main():
+    logger.info(f"Application started")
+    context = contextCreator()
     spark = SparkSessionCreater(context.config["sparkParameters"]).createSpark()
+
+    if context.argsConfig.useCase == "DataJob":
+        LoadData(spark=spark, context=context).startDataJob()
+    elif context.argsConfig.useCase == "CalculateKPI":
+        KPILoader(spark=spark, context=context).startMetricCalculation()
+    else:
+        logger.info("JobMode should be DataJob or CalculateKPI")
+
+
+
+
+
+if __name__=="__main__":
+    main()
+    # spark = SparkSessionCreater(context.config["sparkParameters"]).createSpark()
 
     # df.write.format('delta').mode('overwrite').partitionBy("Age").save("C:\\Users\\singhays\\Projects\\CaseStudy\\temp\\data")
     # FileImplicits.deleteFileOrDirectory(context.config["sparkParameters"]["spark.local.dir"])
-    o=DataframeImplicits.read(spark=spark, path="C:\\Users\\singhays\\Projects\\CaseStudy\\data\\OTIF_DATA_deivery_note.csv", format="csv", options={"header":"true","inferSchema":"true"})
+    # o=DataframeImplicits.read(spark=spark, path="C:\\Users\\singhays\\Projects\\CaseStudy\\data\\OTIF_DATA_deivery_note.csv", format="csv", options={"header":"true","inferSchema":"true"})
     # o.show()
     # o.withColumn("date",to_date("Actual_Delivery_Date","dd-MM-yyyy")).show()
     # o.printSchema()

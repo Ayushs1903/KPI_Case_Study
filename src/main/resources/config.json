@@ -6,7 +6,8 @@
     "spark.driver.memory":"512M",
     "spark.sql.shuffle.partitions": "4",
     "spark.sql.sources.partitionOverwriteMode": "dynamic",
-    "spark.local.dir": "C:\\Users\\singhays\\Projects\\CaseStudy\\temp\\spark"
+    "spark.local.dir": "C:\\Users\\singhays\\Projects\\CaseStudy\\temp\\spark",
+    "spark.debug.maxToStringFields":"100"
   },
 
   "tables": {
@@ -30,36 +31,36 @@
     "inputOrders": {
       "format": "csv",
       "options": {
-        "headers": "true",
+        "header": "true",
         "inferSchema": "true"
       }
     },
     "outputOrders": {
       "format": "delta",
+      "mode": "overwrite",
       "options": {
-        "mode": "overwrite",
         "partitionBy": "Sales_Organization,Year,Month"
       }
     },
     "inputDelivery": {
       "format": "csv",
       "options": {
-        "headers": "true",
+        "header": "true",
         "inferSchema": "true"
       }
     },
     "outputDelivery": {
       "format": "delta",
+      "mode": "overwrite",
       "options": {
-        "mode": "overwrite",
         "partitionBy": "Sales_Organization,Year,Month"
       }
     }
   },
   "OTIF": {
     "format": "delta",
+    "mode": "overwrite",
     "options": {
-        "mode": "overwrite",
         "partitionBy": "Sales_Organization,Year,Month"
       }
   }
