@@ -32,9 +32,9 @@ class LoadData:
             numDays = self.context.argsConfig.numDays
             requestedDate = datetime.strptime(referenceDate, "%Y-%m-%d").date() - timedelta(days=numDays)
             logger.info(f"Requested to load from date: {requestedDate}")
-            filterCondition = [(col("Year") > lit(requestedDate.year)) | (col("Year") == lit(requestedDate.year) & col("Month") >= requestedDate.month)]
+            filterCondition = [(col("Year") > lit(requestedDate.year)) | ((col("Year") == lit(requestedDate.year)) & (col("Month") >= requestedDate.month))]
             df = df.filter(*filterCondition)
-
+            logger.info(f"Loaded order records: {df.count()}")
         else:
             logger.info(f"Started orders full load")
 
@@ -73,9 +73,9 @@ class LoadData:
             numDays = self.context.argsConfig.numDays
             requestedDate = datetime.strptime(referenceDate, "%Y-%m-%d").date() - timedelta(days=numDays)
             logger.info(f"Requested to load from date: {requestedDate}")
-            filterCondition = [(col("Year") > lit(requestedDate.year)) | (col("Year") == lit(requestedDate.year) & col("Month") >= requestedDate.month)]
+            filterCondition = [(col("Year") > lit(requestedDate.year)) | ((col("Year") == lit(requestedDate.year)) & (col("Month") >= requestedDate.month))]
             df = df.filter(*filterCondition)
-
+            logger.info(f"Loaded delivery records: {df.count()}")
         else:
             logger.info(f"Started delivery full load")
             TableImplicits.deployTable(spark=self.spark,
