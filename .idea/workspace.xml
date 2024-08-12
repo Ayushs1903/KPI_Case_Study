@@ -5,16 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6bbffab3-6e1f-466a-ad48-0459068bfee8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/pyspark/CalculateKPI.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/pyspark/Context.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/pyspark/DataJob.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/pyspark/Utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/pyspark/code.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/pyspark/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/pyspark/table.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/tablesDDL/Delivery.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/tablesDDL/Orders.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sc.bat" beforeDir="false" afterPath="$PROJECT_DIR$/sc.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/pyspark/CalculateKPI.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/pyspark/CalculateKPI.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/pyspark/Utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/pyspark/Utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/pyspark/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/pyspark/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/pyspark/table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/tablesDDL/table.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,6 +48,11 @@
     "project.structure.side.proportion": "0.3908046"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\singhays\Projects\CaseStudy\src\main\tables" />
+    </key>
+  </component>
   <component name="RunManager" selected="Batch.sc">
     <configuration name="sc" type="BatchConfigurationType" factoryName="Batch" temporary="true">
       <module name="CaseStudy" />
@@ -150,10 +152,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Batch.sc" />
+        <item itemvalue="Python.CalculateKPI" />
         <item itemvalue="Python.Context (1)" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.Context" />
-        <item itemvalue="Python.CalculateKPI" />
       </list>
     </recent_temporary>
   </component>

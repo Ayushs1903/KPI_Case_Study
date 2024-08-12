@@ -18,7 +18,7 @@ class Logger:
         return logger
 
 
-logger = Logger("Utility")
+logger = Logger("Utility").getlogger()
 
 
 class FileImplicits(object):
@@ -50,7 +50,32 @@ class ConfigLoader(object):
 class DataframeImplicits(object):
     @staticmethod
     def read(spark, path, format, options={}):
+        # logger.info(f"Started reading path: {path}")
         return spark.read.format(format).options(**options).load(path)
+    @staticmethod
+    def write(spark, df, path, format, options={}):
+        logger.info(f"Started writing to path: {path}")
+        df.write.format(format).options(**options).save(path)
+
+class TableImplicits(object):
+    @staticmethod
+    def loadTable(path):
+        with open(path,"r") as table:
+            script = table.read()
+        return script
+    @staticmethod
+    def deployTable(spark, scriptPath):
+        script = TableImplicits.loadTable(scriptPath)
+        logger.info(f"Deploying table \n {script}")
+        table = spark.sql(script)
+        table.show()
+        logger.info(f"Successfully deployed table")
+
+
+
+
+
+
 
 
 

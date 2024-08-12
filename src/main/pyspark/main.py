@@ -1,4 +1,5 @@
 from pyspark.sql import SparkSession
+from pyspark.sql.functions import to_date
 from Utils import Logger, ConfigLoader, FileImplicits, DataframeImplicits
 from Context import parseArguments, Context
 
@@ -34,17 +35,22 @@ def main():
 if __name__=="__main__":
     context = main()
     spark = SparkSessionCreater(context.config["sparkParameters"]).createSpark()
-    data = [("Alice", 34), ("Bob", 45), ("Cathy", 29)]
 
-    # Create DataFrame
-    df = spark.createDataFrame(data, ["Name", "Age"])
-
-    # Show DataFrame
-    df.show()
     # df.write.format('delta').mode('overwrite').partitionBy("Age").save("C:\\Users\\singhays\\Projects\\CaseStudy\\temp\\data")
     # FileImplicits.deleteFileOrDirectory(context.config["sparkParameters"]["spark.local.dir"])
-    o=DataframeImplicits.read(spark=spark,path="C:\\Users\\singhays\\Projects\\CaseStudy\\temp\\data",format="delta")
-    o.show()
+    o=DataframeImplicits.read(spark=spark, path="C:\\Users\\singhays\\Projects\\CaseStudy\\data\\OTIF_DATA_deivery_note.csv", format="csv", options={"header":"true","inferSchema":"true"})
+    # o.show()
+    # o.withColumn("date",to_date("Actual_Delivery_Date","dd-MM-yyyy")).show()
+    # o.printSchema()
+    # with open("C:\\Users\\singhays\\Projects\\CaseStudy\\src\\main\\tablesDDL\\Delivery.sql", "r") as f:
+    #     content = f.read()
+    # print(content)
+    # df = spark.sql(content)
+    # a = spark.sql("select * from delivery")
+    # a.show()
+    # o.withColumn("Actual_Delivery_Date",to_date("Actual_Delivery_Date","dd-MM-yyyy")).write.format("delta").mode('overwrite').partitionBy("Sales_Organization").save("C:\\Users\\singhays\\Projects\\CaseStudy\\tables\\delivery")
+    # a = spark.sql("select * from delivery")
+    # a.show()
 
 
 

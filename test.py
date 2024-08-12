@@ -37,7 +37,7 @@ def main(case):
     df.show()
     # df.write.format('delta').mode('overwrite').partitionBy("Age").save("\\testf\\test1")
 
-    with open("C:\\Users\\singhays\\Projects\\CaseStudy\\src\\main\\pyspark\\table.sql","r") as f:
+    with open("src/main/tablesDDL/table.sql", "r") as f:
         content = f.read()
     print(content)
 

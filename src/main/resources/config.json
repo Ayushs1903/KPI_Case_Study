@@ -1,10 +1,67 @@
 {
+  "absolutePath":"C:\\Users\\singhays\\Projects\\CaseStudy",
+
   "sparkParameters": {
     "spark.master":"local[4]",
     "spark.driver.memory":"512M",
     "spark.sql.shuffle.partitions": "4",
     "spark.sql.sources.partitionOverwriteMode": "dynamic",
     "spark.local.dir": "C:\\Users\\singhays\\Projects\\CaseStudy\\temp\\spark"
+  },
 
+  "tables": {
+    "orders": "\\tables\\orders",
+    "delivery": "\\tables\\delivery",
+    "OTIF": "\\tables\\otif"
+  },
+
+  "tableScripts": {
+    "orders": "\\src\\main\\tablesDDL\\Orders.sql",
+    "delivery": "\\src\\main\\tablesDDL\\Delivery.sql",
+    "OTIF": "\\src\\main\\tablesDDL\\OTIF.sql"
+  },
+
+  "data": {
+    "orders": "\\data\\OTIF_DATA_Sales_order.csv",
+    "delivery": "\\data\\OTIF_DATA_deivery_note.csv"
+  },
+
+  "dataJob": {
+    "inputOrders": {
+      "format": "csv",
+      "options": {
+        "headers": "true",
+        "inferSchema": "true"
+      }
+    },
+    "outputOrders": {
+      "format": "delta",
+      "options": {
+        "mode": "overwrite",
+        "partitionBy": "Sales_Organization,Year,Month"
+      }
+    },
+    "inputDelivery": {
+      "format": "csv",
+      "options": {
+        "headers": "true",
+        "inferSchema": "true"
+      }
+    },
+    "outputDelivery": {
+      "format": "delta",
+      "options": {
+        "mode": "overwrite",
+        "partitionBy": "Sales_Organization,Year,Month"
+      }
+    }
+  },
+  "OTIF": {
+    "format": "delta",
+    "options": {
+        "mode": "overwrite",
+        "partitionBy": "Sales_Organization,Year,Month"
+      }
   }
+
 }
