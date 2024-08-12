@@ -60,7 +60,7 @@ class TableImplicits(object):
     @staticmethod
     def deployTable(spark, scriptPath):
         script = TableImplicits.loadTable(scriptPath)
-        logger.info(f"Deploying table \n {script}")
+        logger.info(f"Deploying table \n {script} \n")
         spark.sql(script)
         logger.info(f"Successfully deployed table")
 
